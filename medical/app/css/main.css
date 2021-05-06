@@ -1,0 +1,28 @@
+
+
+app-head{
+  display: block;
+  margin-bottom: 3rem;
+}
+
+canvas{
+  width: 100%
+}
+
+.precode {
+    border: 1px solid black;
+    padding: .5rem;
+    border-radius: 4px;
+    background: #d0d0d0;
+    color: #444444;
+    max-height: 20rem;
+}
+
+.bs-6{
+      box-shadow: 0 0 6px;
+}
+
+.lg-img{
+  max-height: 2rem;
+  margin-top: -0.3rem;
+}

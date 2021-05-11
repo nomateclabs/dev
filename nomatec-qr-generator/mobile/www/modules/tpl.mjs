@@ -11,7 +11,7 @@ const tpl = {
   topnav(){
     return x('nav', {class: 'navbar navbar-dark bg-primary mb-4'},
       x('div', {class: 'container-fluid d-inline-block'},
-        x('span', {class: 'navbar-brand h1 nav-txt'}, config.app.name)
+        x('h3', {class: 'navbar-brand h1 nav-txt'}, config.app.name)
       )
     )
   },
@@ -75,7 +75,7 @@ const tpl = {
             x('label', 'Background'),
             x('input', {
               type: 'color',
-              class: 'form-control',
+              class: 'form-control colpik',
               value: ls.get('qrBG'),
               onchange(){
                 qrcode._htOption.colorLight = this.value;
@@ -91,7 +91,7 @@ const tpl = {
             x('input', {
               type: 'color',
               value: ls.get('qrFG'),
-              class: 'form-control',
+              class: 'form-control colpik',
               onchange(){
                 qrcode._htOption.colorDark = this.value;
                 utils.reserQR(ls.get('qrcurrent'));

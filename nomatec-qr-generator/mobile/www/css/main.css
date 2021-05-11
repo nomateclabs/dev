@@ -18,11 +18,19 @@
 #footer{
   margin-top: 2rem;
   box-shadow: 0 0 6px black;
-  padding-bottom: 4px;
-  padding-top: 4px;
+  padding-bottom: 10px;
+  padding-top: 13px;
   font-size: 16px;
-  height: 32px;
+  height: 52px;
   width: 100%;
   display: block;
   text-align: center;
+}
+
+.colpik {
+    height: 6rem;
+}
+
+nav {
+    box-shadow: 0 0 6px black;
 }

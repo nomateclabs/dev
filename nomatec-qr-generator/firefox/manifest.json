@@ -1,0 +1,39 @@
+{
+  "name": "Nomatec QR Generator",
+  "author": "Nomatec Labs",
+  "homepage_url": "https://www.nomateclabs.com",
+  "description": "Generate QR codes from any text data",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["sw.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nomatecQrGenerator@nomateclabs.com"
+    }
+  },
+  "browser_action": {
+    "default_popup": "/app/index.html",
+    "default_icon": {
+      "16": "app/img/lg_32.png",
+      "32": "app/img/lg_32.png",
+      "48": "app/img/lg_48.png",
+      "72": "app/img/lg_72.png",
+      "96": "app/img/lg_96.png",
+      "144": "app/img/lg_144.png",
+      "192": "app/img/lg_192.png",
+      "256": "app/img/lg_256.png"
+    }
+  },
+  "icons": {
+    "16": "app/img/lg_32.png",
+    "32": "app/img/lg_32.png",
+    "48": "app/img/lg_48.png",
+    "72": "app/img/lg_72.png",
+    "96": "app/img/lg_96.png",
+    "144": "app/img/lg_144.png",
+    "192": "app/img/lg_192.png",
+    "256": "app/img/lg_256.png"
+  }
+}

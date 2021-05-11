@@ -30,7 +30,7 @@ const tpl = {
       rows: '8',
       value: ls.get('qrcurrent'),
       placeholder: 'Start typing...',
-      onkeyup(evt){
+      onkeyup: utils.debounce(function(evt){
 
         let val = evt.target.value,
         len = config.app.maxlen;
@@ -41,7 +41,7 @@ const tpl = {
 
         utils.reserQR(val);
 
-      }
+      },500)
     },ls.get('qrcurrent')),
     item = x('div', {class: 'container-fluid'},
       x('div', {class: 'form-group'},ta,cnt),

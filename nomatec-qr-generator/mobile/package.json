@@ -1,0 +1,22 @@
+{
+  "name": "com.nomateclabs.nomatecQrGenerator",
+  "displayName": "Nomatec QR Generator",
+  "version": "1.0.0",
+  "description": "Generate QR codes from any text data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Nomatec Labs",
+  "devDependencies": {
+    "cordova-plugin-whitelist": "^1.3.4"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  }
+}

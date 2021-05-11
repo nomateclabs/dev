@@ -1,5 +1,7 @@
 {
   "name": "Nomatec QR Generator",
+  "author": "Nomatec Labs",
+  "homepage_url": "https://www.nomateclabs.com",
   "description": "Generate QR codes from any text data",
   "version": "1.0.0",
   "manifest_version": 3,

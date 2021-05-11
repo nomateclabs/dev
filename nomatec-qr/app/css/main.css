@@ -1,0 +1,35 @@
+@import "./bootstrap.min.css";
+
+body{
+    width: 500px;
+    overflow: scroll;
+}
+
+.nav-txt{
+  margin-left: 15px;
+  font-size: 1.4rem;
+  position: absolute;
+  line-height: 1;
+}
+
+#editor{
+  height: 300px;
+  min-width: 100%;
+}
+
+#qrcode{
+  margin-top: 1rem;
+  min-width: 100%;
+}
+
+#footer{
+  margin-top: 2rem;
+  box-shadow: 0 0 6px black;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 16px;
+  height: 32px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}

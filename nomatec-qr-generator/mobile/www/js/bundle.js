@@ -487,7 +487,7 @@
   			this._oContext = this._elCanvas.getContext("2d");
   			this._bIsPainted = false;
   			this._elImage = x('img', {
-  				class: 'img-thumbnail',
+  				class: 'img-thumbnail img-fluid',
   				alt: 'QR CODE',
   				style: 'display: none;'
   			});

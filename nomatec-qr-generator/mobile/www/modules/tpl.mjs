@@ -58,12 +58,10 @@ const tpl = {
                 let val = this.value;
                 if(val.length){
                   val = val + '.png';
-                  anchor.lastChild.download = val;
                   ls.set('qrtitle', val);
                 } else {
                   val = 'QR_image.png'
                   this.value = val.slice(0,-4);
-                  anchor.lastChild.download = val;
                   ls.set('qrtitle', val);
                 }
               }

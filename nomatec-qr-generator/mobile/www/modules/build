@@ -1,0 +1,1 @@
+rollup main.mjs --file ../js/bundle.js --format iife

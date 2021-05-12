@@ -5,6 +5,68 @@ if(!ls.get('qrtitle')){
 	ls.set('qrtitle', "QR_image.png")
 }
 
+
+/**
+ * Convert a base64 string in a Blob according to the data and contentType.
+ *
+ * @param b64Data {String} Pure base64 string without contentType
+ * @param contentType {String} the content type of the file i.e (image/jpeg - image/png - text/plain)
+ * @param sliceSize {Int} SliceSize to process the byteCharacters
+ * @see http://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
+ * @return Blob
+ */
+function b64toBlob(b64Data, contentType, sliceSize) {
+        contentType = contentType || '';
+        sliceSize = sliceSize || 512;
+
+        var byteCharacters = atob(b64Data);
+        var byteArrays = [];
+
+        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+
+            var byteArray = new Uint8Array(byteNumbers);
+
+            byteArrays.push(byteArray);
+        }
+
+      var blob = new Blob(byteArrays, {type: contentType});
+      return blob;
+}
+
+/**
+ * Create a Image file according to its database64 content only.
+ *
+ * @param folderpath {String} The folder where the file will be created
+ * @param filename {String} The name of the file that will be created
+ * @param content {Base64 String} Important : The content can't contain the following string (data:image/png[or any other format];base64,). Only the base64 string is expected.
+ */
+function savebase64AsImageFile(folderpath,filename,content,contentType){
+    // Convert the base64 string in a Blob
+    var DataBlob = b64toBlob(content,contentType);
+
+    console.log("Starting to write the file :3");
+
+    window.resolveLocalFileSystemURL(folderpath, function(dir) {
+        console.log("Access to the directory granted succesfully");
+		dir.getFile(filename, {create:true}, function(file) {
+            console.log("File created succesfully.");
+            file.createWriter(function(fileWriter) {
+                console.log("Writing content to file");
+                fileWriter.write(DataBlob);
+								alert(filename + ' saved in path '+ folderpath);
+            }, function(){
+                alert('Unable to save file in path '+ folderpath);
+            });
+		});
+    });
+}
+
 let qrtitle = ls.get('qrtitle');
 
 var QRCode;
@@ -258,7 +320,7 @@ var QRCode;
 	})() : (function () { // Drawing in Canvas
 		function _onMakeImage() {
 			this._elImage.src = this._elCanvas.toDataURL("image/png");
-			this._elImage.parentNode.href = this._elCanvas.toDataURL("image/png");
+			this._elImage.parentNode['data-href'] = this._elCanvas.toDataURL("image/png");
 			this._elImage.style.display = "inline-block";
 			this._elCanvas.style.display = "none";
 		}
@@ -333,13 +395,32 @@ var QRCode;
 				style: 'display: none;'
 			})
 
+			let $this = this;
+
 			this._el.appendChild(x('a', {
 					class: 'd-block text-center',
-					download: qrtitle
+					onclick(){
+							/** Pocess the type1 base64 string **/
+							var myBaseString = $this._elImage.src;
+
+							// Split the base64 string in data and contentType
+							var block = myBaseString.split(";");
+							// Get the content type
+							var dataType = block[0].split(":")[1];// In this case "image/png"
+							// get the real base64 content of the file
+							var realData = block[1].split(",")[1];// In this case "iVBORw0KGg...."
+
+							// The path where the file will be created
+							var folderpath = "file:///storage/emulated/0/";
+							// The name of your file, note that you need to know if is .png,.jpeg etc
+							var filename = ls.get('qrtitle');
+
+							savebase64AsImageFile(folderpath,filename,realData,dataType);
+					}
 				}, this._elImage)
-			);
+			)
 			this._bSupportDataURI = null;
-		};
+		}
 
 		/**
 		 * Draw the QRCode
@@ -347,9 +428,9 @@ var QRCode;
 		 * @param {QRCode} oQRCode
 		 */
 		Drawing.prototype.draw = function (oQRCode) {
-            var _elImage = this._elImage;
-            var _oContext = this._oContext;
-            var _htOption = this._htOption;
+      var _elImage = this._elImage;
+      var _oContext = this._oContext;
+      var _htOption = this._htOption;
 
 			var nCount = oQRCode.getModuleCount();
 			var nWidth = _htOption.width / nCount;

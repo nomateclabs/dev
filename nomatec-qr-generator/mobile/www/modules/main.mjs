@@ -26,4 +26,11 @@ const app = {
   }
 }
 
-app.build().init()
+document.addEventListener('deviceready', onDeviceReady, false);
+
+function onDeviceReady() {
+    // Cordova is now initialized. Have fun!
+    app.build().init()
+    console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
+
+}

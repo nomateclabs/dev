@@ -7,6 +7,7 @@
     <author email="support@nomateclabs.com" href="https://www.nomateclabs.com">
         Nomatec Labs
     </author>
+
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -15,11 +16,14 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-intent href="data:*" />
+    <icon src="lg_512.png" />
     <platform name="android">
+        <preference name="SplashScreenDelay" value="1000" />
         <allow-intent href="market:*" />
+
+
+
     </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+    <engine name="android" spec="^7.0.0" />
 </widget>

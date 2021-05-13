@@ -320,8 +320,7 @@ var QRCode;
 	})() : (function () { // Drawing in Canvas
 		function _onMakeImage() {
 			this._elImage.src = this._elCanvas.toDataURL("image/png");
-			this._elImage.parentNode['data-href'] = this._elCanvas.toDataURL("image/png");
-			this._elImage.style.display = "inline-block";
+			this._elImage.style.display = "block";
 			this._elCanvas.style.display = "none";
 		}
 
@@ -390,15 +389,15 @@ var QRCode;
 			this._oContext = this._elCanvas.getContext("2d");
 			this._bIsPainted = false;
 			this._elImage = x('img', {
-				class: 'img-thumbnail img-fluid',
+				class: 'img-fluid',
 				alt: 'QR CODE',
 				style: 'display: none;'
 			})
 
 			let $this = this;
 
-			this._el.appendChild(x('a', {
-					class: 'd-block text-center',
+			this._el.appendChild(x('div', {
+					class: 'container text-center',
 					onclick(){
 							/** Pocess the type1 base64 string **/
 							var myBaseString = $this._elImage.src;

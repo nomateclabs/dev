@@ -318,10 +318,10 @@ var QRCode;
 
 		return Drawing;
 	})() : (function () { // Drawing in Canvas
+
+
 		function _onMakeImage() {
 			this._elImage.src = this._elCanvas.toDataURL("image/png");
-			this._elImage.style.display = "block";
-			this._elCanvas.style.display = "none";
 		}
 
 
@@ -381,17 +381,21 @@ var QRCode;
     		this._android = _getAndroid();
 
 			this._htOption = htOption;
-			this._elCanvas = document.createElement("canvas");
-			this._elCanvas.width = htOption.width;
-			this._elCanvas.height = htOption.height;
-			el.appendChild(this._elCanvas);
+
+			this._elCanvas = x('canvas', {
+				class: 'hidden mw-100',
+				width: htOption.width,
+				height: htOption.height
+			})
+
+			el.append(this._elCanvas);
+
 			this._el = el;
 			this._oContext = this._elCanvas.getContext("2d");
 			this._bIsPainted = false;
 			this._elImage = x('img', {
 				class: 'img-fluid',
-				alt: 'QR CODE',
-				style: 'display: none;'
+				alt: 'QR CODE'
 			})
 
 			let $this = this;
@@ -437,7 +441,6 @@ var QRCode;
 			var nRoundedWidth = Math.round(nWidth);
 			var nRoundedHeight = Math.round(nHeight);
 
-			_elImage.style.display = "none";
 			this.clear();
 
 			for (var row = 0; row < nCount; row++) {

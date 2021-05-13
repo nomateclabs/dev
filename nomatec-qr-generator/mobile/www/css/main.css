@@ -36,3 +36,11 @@
 nav {
     box-shadow: 0 0 6px black;
 }
+
+.hidden{
+  display: none!important;
+}
+
+.mw-100{
+  max-width: 100%;
+}

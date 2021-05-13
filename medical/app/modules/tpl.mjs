@@ -290,7 +290,7 @@ const tpl = {
             x('a', {href: '/'}, 'Home')
           ),
           x('li', {class: 'dropdown'},
-            x('a', {href: '/'}, 'Shop'),
+            x('a', {href: '/'}, 'Services'),
             x('i', {class: 'fa fa-angle-down dropdown-trigger'}),
             x('ul', {class: 'dropdown-menu megamenu-wide'},
               x('li',

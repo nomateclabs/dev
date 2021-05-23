@@ -1,0 +1,19 @@
+<section class="footer-bar">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2><i class="ion-iphone"></i> <%= config.phone %> </h2>
+        <ul>
+          <% for (let i = 0; i < theme.social.length; i++) { %>
+            <li><a href="<%= theme.social[i].href %>"><i class="ion-social-<%= theme.social[i].ico %>"></i></a></li>
+          <% } %>
+        </ul>
+        <!-- end ul -->
+        <h4>Follow us on social media</h4>
+      </div>
+      <!-- end col-12 -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+</section>

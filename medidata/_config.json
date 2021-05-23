@@ -1,0 +1,300 @@
+{
+  "title": "Medidata",
+  "subtitle": "",
+  "phone": "+61 449440440",
+  "googleearth": "https://maps.google.com/maps?q=melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed",
+  "description": "",
+  "keywords": null,
+  "author": "Nomatec Labs",
+  "city": "Melbourne",
+  "country": "Australia",
+  "language": "en",
+  "timezone": "",
+  "url": "http://example.com",
+  "permalink": ":year/:month/:day/:title/",
+  "permalink_defaults": null,
+  "pretty_urls": {
+    "trailing_index": false,
+    "trailing_html": true
+  },
+  "source_dir": "source",
+  "public_dir": "public",
+  "tag_dir": "tags",
+  "archive_dir": "archives",
+  "category_dir": "categories",
+  "code_dir": "downloads/code",
+  "i18n_dir": ":lang",
+  "skip_render": null,
+  "new_post_name": ":title.md",
+  "default_layout": "post",
+  "titlecase": false,
+  "external_link": {
+    "enable": true,
+    "field": "site",
+    "exclude": ""
+  },
+  "filename_case": 0,
+  "render_drafts": false,
+  "post_asset_folder": false,
+  "relative_link": false,
+  "future": true,
+  "highlight": {
+    "enable": true,
+    "line_number": true,
+    "auto_detect": false,
+    "tab_replace": "",
+    "wrap": true,
+    "hljs": false
+  },
+  "prismjs": {
+    "enable": false,
+    "preprocess": true,
+    "line_number": true,
+    "tab_replace": ""
+  },
+  "index_generator": {
+    "path": "/news",
+    "per_page": 10,
+    "order_by": "-date"
+  },
+  "default_category": "uncategorized",
+  "category_map": null,
+  "tag_map": null,
+  "meta_generator": true,
+  "date_format": "YYYY-MM-DD",
+  "time_format": "HH:mm:ss",
+  "updated_option": "mtime",
+  "per_page": 10,
+  "pagination_dir": "page",
+  "include": null,
+  "exclude": null,
+  "ignore": null,
+  "theme": "medidata-blog",
+  "deploy": {
+    "type": ""
+  },
+  "theme_config": {
+    "navbar_brand": "/images/logo_nav.png",
+    "copyright": "Copyright © 2021 , Medicdata",
+    "menu": {
+      "Home": "/index.html",
+      "News": "/news/",
+      "Archives": "/archives/",
+      "FAQ": "/faq.html",
+      "Contact": "/contact.html"
+    },
+    "rss": "/atom.xml",
+    "social": [{
+      "href": "https://facebook.com",
+      "ico": "facebook",
+       "title": "facebook"
+    },{
+      "href": "https://twitter.com",
+      "ico": "twitter",
+       "title": "twitter"
+    }],
+    "excerpt_link": "Read More",
+    "fancybox": false,
+    "widgets": [
+      "about",
+      "category",
+      "tag",
+      "tagcloud",
+      "archive",
+      "recent_posts"
+    ],
+    "about_widget_content": "<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>\n",
+    "archive_type": "monthly",
+    "show_count": true,
+    "google_analytics": null,
+    "favicon": null,
+    "twitter_id": null,
+    "google_plus": null,
+    "fb_admins": null,
+    "fb_app_id": null,
+    "js": [
+      "js/jquery.min.js",
+      "js/bootstrap.min.js",
+      "js/owl.carousel.js",
+      "js/wow.js",
+      "js/jquery.stellar.js",
+      "js/smooth-scroll.js",
+      "js/bootstrap-datepicker.js",
+      "js/jquery.fancybox.js",
+      "js/jquery.maskedinput.js",
+      "js/jquery.ba-cond.min.js",
+      "js/jquery.slitslider.js",
+      "js/slider-settings.js",
+      "js/main.js"
+    ]
+  },
+  "pages": {
+    "css": ["/css/styles.css"],
+    "js": [
+      "/js/modernizr.custom.js",
+      "/js/jquery.min.js",
+      "/js/bootstrap.min.js",
+      "/js/owl.carousel.js",
+      "/js/wow.js",
+      "/js/jquery.stellar.js",
+      "/js/smooth-scroll.js",
+      "/js/bootstrap-datepicker.js",
+      "/js/jquery.fancybox.js",
+      "/js/jquery.maskedinput.js",
+      "/js/jquery.ba-cond.min.js",
+      "/js/jquery.slitslider.js",
+      "/js/slider-settings.js",
+      "/js/main.js"
+    ],
+    "nav": [{
+      "title": "Home",
+      "path": "/"
+    },{
+      "title": "Services",
+      "path": "/services"
+    },{
+      "title": "News",
+      "path": "/news/"
+    },{
+      "title": "Archives",
+      "path": "/archives/"
+    },{
+      "title": "Faq",
+      "path": "/faq.html"
+    },{
+      "title": "Contact",
+      "path": "/contact.html"
+    }],
+    "index": {
+      "title": "Medicdata | Home",
+      "services_offered": [{
+        "head": {
+          "a": "MEDICDATA",
+          "b": "QR"
+        },
+        "description": "Medicdata QR is a scannable QR code enabled Medical card containing current patient medical data and prior medical history.",
+        "img": "images/image9.jpg",
+        "path": "/qr"
+      },{
+        "head": {
+          "a": "MEDICDATA",
+          "b": "NFC"
+        },
+        "description": "Medicdata NFC is a scannable NFC enabled Medical card containing current patient medical data and prior medical history.",
+        "img": "images/image9.jpg",
+        "path": "/nfc"
+      }],
+      "slides": [{
+        "orientation": "horizontal",
+        "rotation1": "-25",
+        "rotation2": "-25",
+        "scale1": "2",
+        "scale2": "2",
+        "head": "Medicdata NFC",
+        "sub": "some sub",
+        "img": "/images/pulse.png"
+      },{
+        "orientation": "verticle",
+        "rotation1": "10",
+        "rotation2": "-15",
+        "scale1": "1.5",
+        "scale2": "1.5",
+        "head": "Medicdata QR",
+        "sub": "some sub",
+        "img": "/images/pulse.png"
+      },{
+        "orientation": "verticle",
+        "rotation1": "3",
+        "rotation2": "3",
+        "scale1": "2",
+        "scale2": "1",
+        "head": "Medicdata NFC",
+        "sub": "some sub",
+        "img": "/images/pulse.png"
+      }]
+    },
+    "faq": {
+      "title": "Medicdata | FAQ",
+      "sub": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod at. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the",
+      "items": [{
+        "question":"Some question 1",
+        "head": "Lorem Ipsum",
+        "answer": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },{
+        "question":"Some question 2",
+        "head": "Lorem Ipsum",
+        "answer": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },{
+        "question":"Some question 3",
+        "head": "Lorem Ipsum",
+        "answer": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      }]
+    },
+    "contact": {
+      "title": "Medicdata | Contact",
+      "sub": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the"
+    }
+  },
+  "services": [{
+    "title": "Medicdata QR",
+    "path": "/qr"
+  },{
+    "title": "Medicdata NFC",
+    "path": "/nfc"
+  }],
+  "newsletter":{
+    "title": "Newsletter",
+    "sub": "Sign up to our newsletter",
+    "path": "https://"
+  },
+  "sponsor": [{
+      "title": "charity 1",
+      "img": "images/partner-logo1.jpg",
+      "path": "https://",
+      "id": "000001"
+  },{
+      "title": "charity 2",
+      "img": "images/partner-logo1.jpg",
+      "path": "https://",
+      "id": "000001"
+  },{
+      "title": "charity 3",
+      "img": "images/partner-logo1.jpg",
+      "path": "https://",
+      "id": "000001"
+  },{
+      "title": "charity 4",
+      "img": "images/partner-logo1.jpg",
+      "path": "https://",
+      "id": "000001"
+  }],
+  "special": {
+    "head": "special header",
+    "sub": "special sub",
+    "items": [{
+      "img": "images/icon1.png",
+      "head": "header 1",
+      "sub": "Test sub 1"
+    },{
+      "img": "images/icon2.png",
+      "head": "header 2",
+      "sub": "Test sub 2"
+    },{
+      "img": "images/icon3.png",
+      "head": "header 3",
+      "sub": "Test sub 3"
+    },{
+      "img": "images/icon4.png",
+      "head": "header 4",
+      "sub": "Test sub 4"
+    }]
+  },
+  "callout": {
+    "main": {
+      "img": "images/icon4.png",
+      "head": "Callout main header",
+      "sub": "Callout main sub",
+      "path": "/"
+    }
+  }
+}
